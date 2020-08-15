@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html"%}
+{% block title%}
+Create Page
+{% endblock %}
+{% block body%}
+<h1>Create Page Here!</h1>
+<br>
+<div>
+<form id="f1" action="" method="post">{% csrf_token  %}
+    <h4>Title:</h4><input type='text' class='title-box' name='ttl' placeholder="Enter Title">
+    <br>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</div>
+            {% endfor %}
+    </div>
+    {% endif %}
+    <br>
+    <h4>Content:</h4>
+    <h6>(should be written in markdown)</h6>
+    <textarea  name="content" form="f1" placeholder="Enter text here..." style="width: 500px; height:300px"></textarea>
+    <button type="submit">Save</button>
+</form>
+</div>
+{%endblock%}
