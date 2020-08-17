@@ -6,6 +6,9 @@
     {{title}}
     {% endif%}
 {% endblock %}
+{% block nav %}
+<a href="{% url 'edit' parameter=title %}" value="{{title}}">Edit Page</a>
+{% endblock %}
 {% block body%}
     {% if pages == None %}
     <h1>Requested Page Not Found!</h1>

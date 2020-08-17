@@ -1,0 +1,4 @@
+For edit functionality:
+https://stackoverflow.com/questions/32690356/how-to-pass-variable-in-link-to-the-django-view/32693365
+https://docs.djangoproject.com/en/1.8/ref/urls/#url
+

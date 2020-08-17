@@ -6,7 +6,7 @@ Create Page
 <h1>Create Page Here!</h1>
 <br>
 <div>
-<form id="f1" action="" method="post">{% csrf_token  %}
+<form id="f1" method="post">{% csrf_token  %}
     <h4>Title:</h4><input type='text' class='title-box' name='ttl' placeholder="Enter Title">
     <br>
     {% if messages %}
