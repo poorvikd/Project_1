@@ -35,9 +35,15 @@ def search_bar(request):
             for entry in entries:
                 if query.lower() in entry.lower():
                     substr.append(entry)
-            return render(request, "encyclopedia/index.html", {
-                "entries": substr
-            })
+            if len(substr)!=0:
+                return render(request, "encyclopedia/index.html", {
+                    "entries": substr
+                })
+            else:
+                return render(request, "encyclopedia/search.html", context={
+                    "pages": None,
+                    "title": "Error!"
+                })
 
         if text!=None:
             text=md.convert(text)

@@ -1,2 +1,0 @@
-# Lol
-Laugh out Loud
